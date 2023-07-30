@@ -9,12 +9,12 @@ public class App {
     public static void main(String[] args) {
         /** Вызов кода первого пакета positivechecker,
          * чтобы вызвать исключение InvalidNumberException из класса PositiveNumberChecker,
-         * нужно ввести в консоль число <= 0, например 0 или -5.
+         * нужно ввести в консоль число <= 0.
          */
         PositiveNumberChecker.main(args);
 
         /** Вызов кода второго пакета divisionprogram,
-         * чтобы вызвать исключение DivisionByZeroException, нужно ввести второе число, равное 0.
+         * чтобы вызвать исключение DivisionByZeroException, нужно ввести второе число = 0.
          */
         DivisionProgram.main(args);
 
