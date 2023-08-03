@@ -11,19 +11,19 @@ public class PowerCalculator {
      * Если основание равно нулю и показатель степени отрицательный, генерируется InvalidInputException.
      * Если результат возврата метода получается бесконечным или NaN, генерируется ArithmeticOperationsException.
      *
-     * @param base     число, которое нужно возвести в степень
-     * @param exponent степень, в которую нужно возвести base
+     * @param basis     число, которое нужно возвести в степень
+     * @param degree степень, в которую нужно возвести base
      * @return double результат возведения в степень
      * @throws InvalidInputException         если основание равно нулю и показатель степени отрицательный
-     * @throws ArithmeticOperationsException если результат вычислений равен Infinity или NaN
+     * @throws ArithmeticOperationsException если результат вычислений равен бесконечности 
      */
-    public static double calculatePower(double base, double exponent) throws ArithmeticOperationsException, InvalidInputException {
-        if (base == 0 && exponent < 0) {
-            throw new InvalidInputException("Invalid input: base 0 with negative exponent is undefined");
+    public static double calculatePower(double basis, double degree) throws ArithmeticOperationsException, InvalidInputException {
+        if (basis == 0 && degree < 0) {
+            throw new InvalidInputException("Не верный ввод: первое число 0 с отрицательной степенью не вычисляется");
         }
-        double power = Math.pow(base, exponent);
+        double power = Math.pow(basis, degree);
         if (!Double.isFinite(power)) {
-            throw new ArithmeticOperationsException("Infinity or NaN: result is infinity or NaN");
+            throw new ArithmeticOperationsException("Бесконечное число, выход за пределы ");
         }
         return power;
     }
