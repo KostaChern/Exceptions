@@ -18,7 +18,7 @@ public class PowerCalculator {
      * @throws ArithmeticOperationsException если результат вычислений равен бесконечности 
      */
     public static double calculatePower(double basis, double degree) throws ArithmeticOperationsException, InvalidInputException {
-        if (basis == 0 && degree < 0) {
+        if (basis == 0 || degree < 0) {
             throw new InvalidInputException("Не верный ввод: первое число 0 с отрицательной степенью не вычисляется");
         }
         double power = Math.pow(basis, degree);

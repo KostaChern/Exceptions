@@ -1,3 +1,5 @@
+import java.lang.Exception;
+
 package exceptions;
 
 /**

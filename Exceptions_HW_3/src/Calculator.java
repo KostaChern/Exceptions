@@ -55,7 +55,7 @@ public class Calculator {
         boolean isRunning = true;
         while (isRunning) {
             goCalculator();
-            System.out.print("Would you like to perform another calculation? (Y/N): ");
+            System.out.print("Запустим калькулятор по новой? (Y/N): ");
             String choice = new Scanner(System.in).nextLine().toUpperCase();
             if (!choice.equals("Y")) {
                 isRunning = false;
